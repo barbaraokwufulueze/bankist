@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 300;
   color: #444;
   line-height: 1.9;
@@ -84,6 +84,7 @@ body {
 
 .btn--text {
   display: inline-block;
+  align-self: flex-start;
   background: none;
   font-size: 1.7rem;
   font-family: inherit;
@@ -100,7 +101,6 @@ p {
   color: #666;
 }
 
-/* This is BAD for accessibility! Don't do in the real world! */
 button:focus {
   outline: none;
 }
@@ -135,6 +135,7 @@ img {
   transition: all 0.3s;
 }
 
+.links,
 .nav__links {
   display: flex;
   align-items: center;
@@ -146,13 +147,19 @@ img {
 }
 
 .nav__link:link,
-.nav__link:visited {
+.nav__link:visited,
+.app__link:link,
+.app__link:visited {
   font-size: 1.7rem;
   font-weight: 400;
   color: inherit;
   text-decoration: none;
   display: block;
   transition: all 0.3s;
+}
+
+.app__link:link {
+  margin-left: 2rem;
 }
 
 .nav__link--btn:link,
@@ -193,6 +200,13 @@ img {
   justify-items: start;
 }
 
+.header__text {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
 h1 {
   font-size: 5.5rem;
   line-height: 1.35;
@@ -216,7 +230,7 @@ h4 {
 
 .highlight::after {
   display: block;
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -226,6 +240,25 @@ h4 {
   opacity: 0.7;
   transform: scale(1.07, 1.05) skewX(-15deg);
   background-image: var(--gradient-primary);
+}
+
+/* MOBILE */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
 }
 
 /* FEATURES */
@@ -436,6 +469,7 @@ h4 {
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+  margin-top: 4rem;
 }
 
 .dots__dot {
@@ -470,7 +504,7 @@ h4 {
 }
 
 .testimonial::before {
-  content: '\201C';
+  content: "\201C";
   position: absolute;
   top: -5.7rem;
   left: -6.8rem;

@@ -1,0 +1,173 @@
+/* rem and em do NOT depend on html font-size in media queries! Instead, 1rem = 1em = 16px */
+
+/**************************/
+/* BELOW 1344px (Smaller desktops) */
+/**************************/
+
+@media (max-width: 84em) {
+  h1 {
+    font-size: 4.8rem;
+  }
+
+  h4 {
+    font-size: 2.4rem;
+  }
+}
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+
+  .section__header {
+    font-size: 3rem;
+  }
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+
+  .header__title {
+    grid-template-columns: 1fr;
+    column-gap: 4rem;
+    padding: 2rem 4rem;
+    gap: 6.4rem;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .btn--text {
+    align-self: center;
+  }
+
+  .header__img {
+    height: 80%;
+    width: 80%;
+    grid-column: unset;
+    grid-row: 2;
+    transform: translateY(-6rem);
+  }
+
+  .section__header {
+    font-size: 3rem;
+  }
+}
+
+/**************************/
+/* BELOW 830px (Smaller tablets) */
+/**************************/
+
+@media (max-width: 52em) {
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+  }
+
+  .links {
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* 1) Hide it visually */
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .links {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .links,
+  .nav__links {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .nav__link:link,
+  .nav__link:visited,
+  .app__link:link,
+  .app__link:visited {
+    font-size: 3rem;
+  }
+
+  .slider {
+    height: 60rem;
+  }
+
+  .footer__nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 4rem;
+    text-align: center;
+  }
+}
+
+/**************************/
+/* BELOW 705px (Phones) */
+/**************************/
+
+@media (max-width: 44em) {
+  html {
+    /* 9px / 16px  */
+    font-size: 56.25%;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    row-gap: 4rem;
+    justify-content: center;
+    margin: 1rem 4rem;
+  }
+
+  .feature-two {
+    grid-row: 4;
+  }
+}
+
+/* 
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
