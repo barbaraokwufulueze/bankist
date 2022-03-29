@@ -1,5 +1,4 @@
-![Bankist](https://user-images.githubusercontent.com/17248394/160609563-f8e6afaf-9008-4436-9f33-78ea8ee0e45b.png)
-
+![bankist](https://user-images.githubusercontent.com/17248394/160615923-098cce5a-916e-4404-a2e7-ac6026f64a4b.png)
 
 # Bankist
 
